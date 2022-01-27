@@ -8,9 +8,24 @@
 
 html,
 body {
+  font-size: 16px;
   font-family: "Roboto";
   scroll-behavior: smooth;
 }
+
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+}
+
 a {
   text-decoration: none;
 }

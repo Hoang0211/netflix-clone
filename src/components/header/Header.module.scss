@@ -1,0 +1,209 @@
+.header {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 5px solid rgb(46, 46, 46);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4)
+  );
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+  .frame {
+    width: 100%;
+    padding: 28px 56px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      height: 36px;
+      width: 134px;
+    }
+    .actions {
+      select,
+      button {
+        height: 100%;
+        border-radius: 3px;
+        font-size: 1.25rem;
+        color: white;
+      }
+      select {
+        margin-right: 35px;
+        padding-left: 10px;
+        border: 1px solid white;
+        background-color: black;
+        &:focus {
+          outline: none;
+        }
+        option {
+          background-color: rgb(163, 163, 163);
+        }
+      }
+      button {
+        padding: 0 20px;
+        border: none;
+        background-color: rgb(235, 45, 45);
+      }
+    }
+  }
+
+  .feature {
+    height: 100%;
+    margin: 250px 0 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    .title {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    .subtitle {
+      margin: 25px 0;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    form {
+      .text {
+        font-size: 1.25rem;
+      }
+      .inputs {
+        height: 60px;
+        margin-top: 20px;
+        display: flex;
+        input,
+        button {
+          height: 100%;
+          font-size: 1.5rem;
+          outline: none;
+          border: none;
+        }
+        input {
+          width: 450px;
+          padding: 0 10px;
+          font-size: 1.25rem;
+        }
+        button {
+          padding: 0 40px;
+          font-size: 1.5rem;
+          color: white;
+          background-color: rgb(235, 45, 45);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .header {
+    .feature {
+      margin: 180px 0 130px 0;
+      form {
+        .inputs {
+          height: auto;
+          flex-direction: column;
+          align-items: center;
+          input {
+            height: 70px;
+            width: 500px;
+            margin-bottom: 20px;
+          }
+          button {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    .frame {
+      padding: 20px 30px;
+      img {
+        height: 40px;
+        width: 100px;
+      }
+      .actions {
+        select {
+          margin-right: 30px;
+        }
+        button {
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .feature {
+      margin: 120px 0 100px 0;
+      form {
+        .inputs {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          input {
+            height: 50px;
+            width: 90%;
+            margin-bottom: 20px;
+            padding: 0 10px;
+          }
+          button {
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 0 10px;
+    .frame {
+      padding: 10px 20px;
+      img {
+        height: 30px;
+        width: 80px;
+      }
+      .actions {
+        select {
+          margin-right: 10px;
+        }
+        button {
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .feature {
+      margin: 100px 0 70px 0;
+      form {
+        .inputs {
+          input {
+            height: 40px;
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
