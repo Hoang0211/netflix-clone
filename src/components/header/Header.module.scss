@@ -20,8 +20,8 @@
     left: 0;
     object-fit: cover;
     object-position: center;
-    z-index: -1;
   }
+
   .frame {
     width: 100%;
     padding: 28px 56px;
@@ -30,6 +30,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     img {
       height: 36px;
       width: 134px;
@@ -71,6 +72,7 @@
     align-items: center;
     text-align: center;
     color: white;
+    z-index: 1;
     .title {
       font-size: 3.5rem;
       font-weight: 700;
@@ -89,7 +91,8 @@
         margin-top: 20px;
         display: flex;
         input,
-        button {
+        button,
+        .icon {
           height: 100%;
           font-size: 1.5rem;
           outline: none;
@@ -99,12 +102,19 @@
           width: 450px;
           padding: 0 10px;
           font-size: 1.25rem;
+          border-radius: 2px 0 0 2px;
         }
         button {
-          padding: 0 40px;
+          display: flex;
+          align-items: center;
+          padding: 0 30px;
           font-size: 1.5rem;
           color: white;
           background-color: rgb(235, 45, 45);
+          border-radius: 0 2px 2px 0;
+          .icon {
+            margin-left: 5px;
+          }
         }
       }
     }
@@ -124,9 +134,11 @@
             height: 70px;
             width: 500px;
             margin-bottom: 20px;
+            border-radius: 2px;
           }
           button {
             padding: 10px 20px;
+            border-radius: 2px;
           }
         }
       }

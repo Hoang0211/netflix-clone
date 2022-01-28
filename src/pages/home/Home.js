@@ -8,10 +8,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <Header />
-      <div
-        className="test"
-        style={{ background: "black", "min-height": "200vh" }}
-      ></div>
+      <div style={{ minHeight: "100vh" }}></div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 
 import bg from "../../assets/images/misc/home-bg.jpg";
 import logo from "../../logo.svg";
+import { IoIosArrowForward } from "react-icons/io";
 
 import styles from "./Header.module.scss";
 
@@ -34,7 +35,10 @@ const Header = () => {
           </span>
           <div className={styles.inputs}>
             <input placeholder="Email address"></input>
-            <button>Get Started</button>
+            <button>
+              <span>Get Started</span>
+              <IoIosArrowForward className={styles.icon} />
+            </button>
           </div>
         </form>
       </div>
