@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../../components/header/Header";
 import Jumbotron from "../../components/jumbotron/Jumbotron";
+import Faqs from "../../components/faqs/Faqs";
 
 import tv from "../../assets/images/misc/home-tv.jpg";
 import mobile from "../../assets/images/misc/home-mobile.jpg";
@@ -52,6 +53,7 @@ const Home = () => {
           reverse={jumbotron.reverse}
         />
       ))}
+      <Faqs />
       <div style={{ minHeight: "100vh" }}></div>
     </div>
   );
