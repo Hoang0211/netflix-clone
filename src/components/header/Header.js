@@ -1,8 +1,9 @@
 import React from "react";
 
+import RegForm from "../regForm/RegForm";
+
 import bg from "../../assets/images/misc/home-bg.jpg";
 import logo from "../../logo.svg";
-import { IoIosArrowForward } from "react-icons/io";
 
 import styles from "./Header.module.scss";
 
@@ -29,19 +30,7 @@ const Header = () => {
         <span className={styles.subtitle}>
           Watch anywhere. Cancel at any time.
         </span>
-        <form>
-          <span className={styles.text}>
-            Ready to watch? Enter your email to create or restart your
-            membership.
-          </span>
-          <div className={styles.inputs}>
-            <input placeholder="Email address"></input>
-            <button>
-              <span>Get Started</span>
-              <IoIosArrowForward className={styles.icon} />
-            </button>
-          </div>
-        </form>
+        <RegForm />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import FaqItem from "./FaqItem";
+import RegForm from "../regForm/RegForm";
 
 import styles from "./Faqs.module.scss";
 
@@ -110,6 +111,7 @@ const Faqs = () => {
           />
         ))}
       </div>
+      <RegForm />
     </div>
   );
 };
