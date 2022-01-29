@@ -54,7 +54,6 @@ const Home = () => {
         />
       ))}
       <Faqs />
-      <div style={{ minHeight: "100vh" }}></div>
     </div>
   );
 };

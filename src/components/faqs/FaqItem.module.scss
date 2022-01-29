@@ -1,10 +1,10 @@
 .faq {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   .header-container {
     height: 80px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@
     cursor: pointer;
 
     .header {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
     .icon {
       height: 30px;
@@ -36,6 +36,18 @@
     span {
       display: inline-block;
       padding: 20px 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .faq {
+    .header-container {
+      height: 60px;
+      .icon {
+        height: 15px;
+        width: auto;
+      }
     }
   }
 }
