@@ -1,9 +1,9 @@
 import React from "react";
 
-import Header from "../../components/header/Header";
+import Header from "../../components/headerHome/Header";
 import Jumbotron from "../../components/jumbotron/Jumbotron";
 import Faqs from "../../components/faqs/Faqs";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/footerHome/Footer";
 
 import tv from "../../assets/images/misc/home-tv.jpg";
 import mobile from "../../assets/images/misc/home-mobile.jpg";
