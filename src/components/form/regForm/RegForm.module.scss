@@ -1,4 +1,4 @@
-form {
+.reg-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +40,7 @@ form {
 }
 
 @media screen and (max-width: 950px) {
-  form {
+  .reg-form {
     .inputs {
       height: auto;
       flex-direction: column;
@@ -60,7 +60,7 @@ form {
 }
 
 @media screen and (max-width: 600px) {
-  form {
+  .reg-form {
     .inputs {
       height: auto;
       display: flex;

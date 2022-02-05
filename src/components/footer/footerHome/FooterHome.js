@@ -1,8 +1,8 @@
 import React from "react";
 
-import styles from "./Footer.module.scss";
+import styles from "./FooterHome.module.scss";
 
-const Footer = () => {
+const FooterHome = () => {
   return (
     <div className={styles.footer}>
       <span className={styles.top}>Questions? Call 0800 302 533</span>
@@ -35,4 +35,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterHome;

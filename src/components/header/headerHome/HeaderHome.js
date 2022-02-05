@@ -1,13 +1,13 @@
 import React from "react";
 
-import RegForm from "../regForm/RegForm";
+import RegForm from "../../form/regForm/RegForm";
 
-import bg from "../../assets/images/misc/home-bg.jpg";
-import logo from "../../logo.svg";
+import bg from "../../../assets/images/misc/home-bg.jpg";
+import logo from "../../../logo.svg";
 
-import styles from "./Header.module.scss";
+import styles from "./HeaderHome.module.scss";
 
-const Header = () => {
+const HeaderHome = () => {
   return (
     <div className={styles.header}>
       <img className={styles.bg} src={bg} alt="bg-img" />
@@ -36,4 +36,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderHome;

@@ -1,9 +1,9 @@
 import React from "react";
 
-import Header from "../../components/headerHome/Header";
+import HeaderHome from "../../components/header/headerHome/HeaderHome";
 import Jumbotron from "../../components/jumbotron/Jumbotron";
 import Faqs from "../../components/faqs/Faqs";
-import Footer from "../../components/footerHome/Footer";
+import FooterHome from "../../components/footer/footerHome/FooterHome";
 
 import tv from "../../assets/images/misc/home-tv.jpg";
 import mobile from "../../assets/images/misc/home-mobile.jpg";
@@ -43,7 +43,7 @@ const jumbotrons = [
 const Home = () => {
   return (
     <div className={styles.home}>
-      <Header />
+      <HeaderHome />
       {jumbotrons.map((jumbotron) => (
         <Jumbotron
           key={jumbotron.id}
@@ -55,7 +55,7 @@ const Home = () => {
         />
       ))}
       <Faqs />
-      <Footer />
+      <FooterHome />
     </div>
   );
 };

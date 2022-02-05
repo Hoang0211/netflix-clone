@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import FaqItem from "./FaqItem";
-import RegForm from "../regForm/RegForm";
+import RegForm from "../form/regForm/RegForm";
 
 import styles from "./Faqs.module.scss";
 

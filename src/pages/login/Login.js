@@ -1,0 +1,22 @@
+import React from "react";
+
+import HeaderSign from "../../components/header/headerSign/HeaderSign";
+import SignForm from "../../components/form/signForm/SignForm";
+import FooterSign from "../../components/footer/footerSign/FooterSign";
+
+import bg from "../../assets/images/misc/home-bg.jpg";
+
+import styles from "./Login.module.scss";
+
+const Login = (props) => {
+  return (
+    <div className={styles.signin}>
+      <img className={styles.bg} src={bg} alt="bg-img" />
+      <HeaderSign />
+      <SignForm type={props.type} />
+      <FooterSign />
+    </div>
+  );
+};
+
+export default Login;
