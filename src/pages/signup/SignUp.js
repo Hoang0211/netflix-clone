@@ -3,14 +3,25 @@ import React, { useState, useRef } from "react";
 import bg from "../../assets/images/misc/home-bg.jpg";
 import logo from "../../logo.svg";
 
-import styles from "./SignIn.module.scss";
+import styles from "./SignUp.module.scss";
 
-const SignIn = () => {
+const SignUp = () => {
+  const [firstNameOnFocus, setFirstNameOnFocus] = useState(false);
   const [emailOnFocus, setEmailOnFocus] = useState(false);
   const [passwordOnFocus, setPasswordOnFocus] = useState(false);
 
+  const firstNameRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+
+  const firstNameOnFocusHandler = () => {
+    firstNameRef.current.focus();
+    setFirstNameOnFocus(true);
+  };
+
+  const firstNameOnBlurHandler = () => {
+    setFirstNameOnFocus(false);
+  };
 
   const emailOnFocusHandler = () => {
     emailRef.current.focus();
@@ -31,13 +42,30 @@ const SignIn = () => {
   };
 
   return (
-    <div className={styles.signin}>
+    <div className={styles.signup}>
       <img className={styles.bg} src={bg} alt="bg-img" />
       <div className={styles.header}>
         <img className={styles.logo} src={logo} alt="netflix-logo" />
       </div>
       <form>
-        <span className={styles.title}>Sign In</span>
+        <span className={styles.title}>Sign Up</span>
+        <div
+          className={`${styles["input-container"]} ${
+            firstNameOnFocus ? styles.focus : styles.blur
+          }`}
+          onClick={firstNameOnFocusHandler}
+        >
+          <label htmlFor="firstName" className={styles.placeholder}>
+            First Name
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            ref={firstNameRef}
+            onBlur={firstNameOnBlurHandler}
+          ></input>
+        </div>
         <div
           className={`${styles["input-container"]} ${
             emailOnFocus ? styles.focus : styles.blur
@@ -73,11 +101,11 @@ const SignIn = () => {
           ></input>
         </div>
         <button type="submit" className={styles["submit-btn"]}>
-          Sign In
+          Sign Up
         </button>
-        <div className={styles.signup}>
-          <span>New to Netflix? </span>
-          <a>Sign up now.</a>
+        <div className={styles.signin}>
+          <span>Already a user? </span>
+          <a>Sign in now.</a>
         </div>
       </form>
       <div className={styles.footer}>
@@ -102,4 +130,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
