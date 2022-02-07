@@ -1,0 +1,64 @@
+.header {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  color: white;
+  z-index: 2;
+  transition: 0.5s ease;
+
+  &.scrolled {
+    background-color: black;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 36px;
+      width: 134px;
+      margin-right: 20px;
+    }
+    span {
+      margin: 0 10px;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      margin-left: 20px;
+    }
+
+    .profile-img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .more {
+      margin-left: 5px;
+      position: relative;
+      cursor: pointer;
+      .options {
+        display: none;
+      }
+      .options.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        span {
+          padding: 5px 0;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

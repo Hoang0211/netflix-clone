@@ -1,0 +1,42 @@
+.featured {
+  height: 100vh;
+  position: relative;
+  .bg {
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  .overview {
+    width: 45%;
+    position: absolute;
+    top: 40%;
+    left: 50px;
+    font-size: 1.25rem;
+    color: white;
+
+    .title {
+      display: block;
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+
+    .desc {
+      margin: 15px 0;
+      display: block;
+    }
+
+    .play {
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      border: none;
+      border-radius: 3px;
+      font-size: 1.25rem;
+      cursor: pointer;
+      .icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
