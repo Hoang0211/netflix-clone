@@ -1,4 +1,4 @@
-.signin {
+.login {
   min-height: 1200px;
   height: 100vh;
   position: relative;
@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width: 950px) {
-  .signin {
+  .login {
     min-height: auto;
     height: 900px;
     position: relative;

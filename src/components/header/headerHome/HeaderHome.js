@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import RegForm from "../../form/regForm/RegForm";
 
@@ -20,7 +21,11 @@ const HeaderHome = () => {
             <option>Suomi</option>
             <option>Svenska</option>
           </select>
-          <button>Sign In</button>
+          <button>
+            <Link to="/signin" className={styles.link}>
+              Sign In
+            </Link>
+          </button>
         </div>
       </div>
       <div className={styles.feature}>

@@ -10,7 +10,7 @@ import styles from "./Login.module.scss";
 
 const Login = (props) => {
   return (
-    <div className={styles.signin}>
+    <div className={styles.login}>
       <img className={styles.bg} src={bg} alt="bg-img" />
       <HeaderSign />
       <SignForm type={props.type} />
