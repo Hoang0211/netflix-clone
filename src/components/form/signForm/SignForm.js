@@ -73,13 +73,6 @@ const SignForm = (props) => {
     const enteredEmail = emailValue;
     const enteredPassword = passwordValue;
 
-    // let url;
-    // if (props.type === "signin") {
-    //   url = process.env.REACT_APP_SIGN_IN;
-    // } else {
-    //   url = process.env.REACT_APP_SIGN_UP;
-    // }
-
     if (props.type === "signup") {
       try {
         await firebaseCtx.signUpUser(

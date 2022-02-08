@@ -1,0 +1,42 @@
+.profile-list {
+  padding: 0px 50px;
+  color: white;
+  .header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 36px;
+      width: 134px;
+    }
+  }
+  .title {
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .profile-container {
+    display: flex;
+    justify-content: center;
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      img {
+        max-height: 200px;
+        max-width: 200px;
+        border: 5px solid black;
+        &:hover {
+          border-color: white;
+        }
+      }
+      .name {
+        margin-top: 20px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

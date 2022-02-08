@@ -9,7 +9,7 @@ import logo from "../../../logo.svg";
 
 import styles from "./HeaderBrowse.module.scss";
 
-const HeaderBrowse = () => {
+const HeaderBrowse = (props) => {
   const firebaseCtx = useContext(FirebaseContext);
   const navigate = useNavigate();
 
@@ -48,10 +48,9 @@ const HeaderBrowse = () => {
         <IoNotificationsOutline className={styles.icon} />
         <img
           className={styles["profile-img"]}
-          src="https://66.media.tumblr.com/eea08445dff6b1c80b96338370bb604e/ea827aef008c99a6-14/s400x600/b3828db1b4b36ce074145b96490b0cbb9e8c297d.jpg"
-          alt=""
+          src={require(`../../../assets/images/users/${firebaseCtx.user.photoURL}.png`)}
+          alt="profile-img"
         />
-        <span>{firebaseCtx.user.displayName}</span>
         <div className={styles.more} onClick={showOptionHandler}>
           <IoMdArrowDropdown className={styles} />
           <div

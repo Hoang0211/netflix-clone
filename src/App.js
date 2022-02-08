@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -7,11 +7,7 @@ import Login from "./pages/login/Login";
 import Browse from "./pages/browse/Browse";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
-import FirebaseContext from "./store/firebase-context";
-
 const App = () => {
-  const firebaseCtx = useContext(FirebaseContext);
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />

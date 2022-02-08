@@ -30,6 +30,7 @@ export const FirebaseContextProvider = (props) => {
       .then(() => {
         return updateProfile(auth.currentUser, {
           displayName: firstName,
+          photoURL: Math.floor(Math.random() * 5) + 1,
         });
       })
       .then((res) => console.log(res))
