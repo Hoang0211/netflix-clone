@@ -62,3 +62,57 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .header {
+    height: 50px;
+    padding: 0 30px;
+
+    .left {
+      .logo {
+        height: 40px;
+        width: 100px;
+        margin-right: 10px;
+      }
+      span {
+        margin: 0 5px;
+      }
+    }
+
+    .right {
+      & > * {
+        margin-left: 10px;
+      }
+
+      .profile-img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 0 20px;
+
+    .left {
+      .logo {
+        height: 30px;
+        width: 80px;
+        margin-right: 5px;
+      }
+    }
+
+    .right {
+      & > * {
+        margin-left: 5px;
+      }
+
+      .profile-img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
