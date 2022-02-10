@@ -33,7 +33,6 @@ export const FirebaseContextProvider = (props) => {
           photoURL: Math.floor(Math.random() * 5) + 1,
         });
       })
-      .then((res) => console.log(res))
       .catch((err) => {
         alert(err.message);
         throw new Error(err.message);
@@ -44,7 +43,6 @@ export const FirebaseContextProvider = (props) => {
   const signInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password)
-      .then((res) => console.log(res))
       .catch((err) => {
         alert(err.message);
         throw new Error(err.message);
