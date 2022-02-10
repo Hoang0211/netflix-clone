@@ -40,8 +40,8 @@ const HeaderBrowse = (props) => {
     <div className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.left}>
         <img className={styles.logo} src={logo} alt="netflix-logo" />
-        <span>Series</span>
-        <span>Movies</span>
+        <span onClick={() => props.setSelectedType("series")}>Series</span>
+        <span onClick={() => props.setSelectedType("films")}>Films</span>
       </div>
       <div className={styles.right}>
         <IoSearchOutline className={styles.icon} />
@@ -52,7 +52,7 @@ const HeaderBrowse = (props) => {
           alt="profile-img"
         />
         <div className={styles.more} onClick={showOptionHandler}>
-          <IoMdArrowDropdown className={styles} />
+          <IoMdArrowDropdown />
           <div
             className={`${styles.options} ${showOptions ? styles.show : ""}`}
           >
