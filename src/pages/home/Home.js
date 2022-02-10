@@ -41,6 +41,7 @@ const jumbotrons = [
 ];
 
 const Home = () => {
+  window.scrollTo({ top: 0 });
   return (
     <div className={styles.home}>
       <HeaderHome />
