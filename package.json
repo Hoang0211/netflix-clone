@@ -15,7 +15,10 @@
     "react-transition-group": "^4.4.2",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://n3verland0211.github.io/netflix-clone",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "react-router-dom": "^6.2.1"
   }
 }
