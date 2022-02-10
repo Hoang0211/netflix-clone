@@ -1,4 +1,5 @@
 .profile-list {
+  height: 100vh;
   padding: 0px 50px;
   color: white;
   .header {
@@ -29,6 +30,7 @@
         max-height: 200px;
         max-width: 200px;
         border: 5px solid black;
+        transition: 0.5s ease;
         &:hover {
           border-color: white;
         }
@@ -36,6 +38,47 @@
       .name {
         margin-top: 20px;
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-list {
+    padding: 0px 30px;
+    .header {
+      height: 50px;
+      .logo {
+        height: 40px;
+        width: 100px;
+      }
+    }
+    .profile-container {
+      .profile {
+        img {
+          max-height: 150px;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .profile-list {
+    padding: 0px 20px;
+    .header {
+      .logo {
+        height: 30px;
+        width: 80px;
+      }
+    }
+    .profile-container {
+      .profile {
+        img {
+          max-height: 120px;
+          max-width: 120px;
+        }
       }
     }
   }

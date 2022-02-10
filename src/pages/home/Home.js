@@ -3,7 +3,7 @@ import React from "react";
 import HeaderHome from "../../components/header/headerHome/HeaderHome";
 import Jumbotron from "../../components/jumbotron/Jumbotron";
 import Faqs from "../../components/faqs/Faqs";
-import FooterHome from "../../components/footer/footerHome/FooterHome";
+import Footer from "../../components/footer/footer/Footer";
 
 import tv from "../../assets/images/misc/home-tv.jpg";
 import mobile from "../../assets/images/misc/home-mobile.jpg";
@@ -55,7 +55,7 @@ const Home = () => {
         />
       ))}
       <Faqs />
-      <FooterHome />
+      <Footer page={"home"} />
     </div>
   );
 };

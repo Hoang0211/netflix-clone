@@ -6,6 +6,7 @@ import ProfileList from "../../components/profile/ProfileList";
 import HeaderBrowse from "../../components/header/headerBrowse/HeaderBrowse";
 import Featured from "../../components/featured/Featured";
 import MovieListsContainer from "../../components/movies/MovieListsContainer";
+import Footer from "../../components/footer/footer/Footer";
 
 import styles from "./Browse.module.scss";
 
@@ -22,6 +23,7 @@ const Browse = () => {
           <HeaderBrowse setSelectedType={setSelectedType} />
           <Featured />
           <MovieListsContainer type={selectedType} />
+          <Footer page={"browse"} />
         </>
       ) : (
         <ProfileList

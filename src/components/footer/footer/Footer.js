@@ -1,10 +1,10 @@
 import React from "react";
 
-import styles from "./FooterHome.module.scss";
+import styles from "./Footer.module.scss";
 
-const FooterHome = () => {
+const Footer = (props) => {
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${props.page === "home" && styles.home}`}>
       <span className={styles.top}>Questions? Call 0800 302 533</span>
       <ul className={styles["links-container"]}>
         <li className={styles.link}>FAQ</li>
@@ -35,4 +35,4 @@ const FooterHome = () => {
   );
 };
 
-export default FooterHome;
+export default Footer;
