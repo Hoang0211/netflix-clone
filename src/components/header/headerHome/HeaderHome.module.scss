@@ -36,7 +36,9 @@
     }
     .actions {
       select,
-      button {
+      .link {
+        vertical-align: top;
+        display: inline-block;
         height: 100%;
         border-radius: 3px;
         font-size: 1.25rem;
@@ -54,12 +56,14 @@
           background-color: rgb(163, 163, 163);
         }
       }
-      button {
+      .link {
         padding: 0 20px;
-        border: none;
         background-color: rgb(235, 45, 45);
-        .link {
-          color: white;
+        color: white;
+        p {
+          height: 100%;
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -107,7 +111,7 @@
         select {
           margin-right: 30px;
         }
-        button {
+        .link {
           padding: 0 20px;
         }
       }
@@ -132,7 +136,7 @@
         select {
           margin-right: 10px;
         }
-        button {
+        .link {
           padding: 5px 10px;
         }
       }

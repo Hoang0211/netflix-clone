@@ -18,11 +18,9 @@ const HeaderHome = () => {
             <option>Suomi</option>
             <option>Svenska</option>
           </select>
-          <button>
-            <Link to='/signin' className={styles.link}>
-              Sign In
-            </Link>
-          </button>
+          <Link to='/signin' className={styles.link}>
+            <p>Sign In</p>
+          </Link>
         </div>
       </div>
       <div className={styles.feature}>
