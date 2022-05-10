@@ -23,6 +23,7 @@
     }
   }
   .body {
+    white-space: pre-line;
     font-size: 2rem;
     background-color: rgb(46, 46, 46);
     &.close {

@@ -1,19 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import RegForm from "../../form/regForm/RegForm";
-
-import bg from "../../../assets/images/misc/home-bg.jpg";
-import logo from "../../../logo.svg";
-
-import styles from "./HeaderHome.module.scss";
+import RegForm from '../../form/regForm/RegForm';
+import bg from '../../../assets/images/misc/home-bg.jpg';
+import logo from '../../../logo.svg';
+import styles from './HeaderHome.module.scss';
 
 const HeaderHome = () => {
   return (
-    <div className={styles.header}>
-      <img className={styles.bg} src={bg} alt="bg-img" />
+    <header className={styles.header}>
+      <img className={styles.bg} src={bg} alt='bg-img' />
       <div className={styles.frame}>
-        <img src={logo} alt="netflix-logo" />
+        <img src={logo} alt='netflix-logo' />
         <div className={styles.actions}>
           <select>
             <option>English</option>
@@ -21,7 +19,7 @@ const HeaderHome = () => {
             <option>Svenska</option>
           </select>
           <button>
-            <Link to="/signin" className={styles.link}>
+            <Link to='/signin' className={styles.link}>
               Sign In
             </Link>
           </button>
@@ -36,7 +34,7 @@ const HeaderHome = () => {
         </span>
         <RegForm />
       </div>
-    </div>
+    </header>
   );
 };
 

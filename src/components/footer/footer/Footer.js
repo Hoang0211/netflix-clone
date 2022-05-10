@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Footer.module.scss";
+import styles from './Footer.module.scss';
 
-const Footer = (props) => {
+const Footer = ({ page }) => {
   return (
-    <div className={`${styles.footer} ${props.page === "home" && styles.home}`}>
+    <div className={`${styles.footer} ${page === 'home' && styles.home}`}>
       <span className={styles.top}>Questions? Call 0800 302 533</span>
-      <ul className={styles["links-container"]}>
+      <ul className={styles['links-container']}>
         <li className={styles.link}>FAQ</li>
         <li className={styles.link}>Help Centre</li>
         <li className={styles.link}>Account</li>

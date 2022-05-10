@@ -1,17 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Jumbotron.module.scss";
+import styles from './Jumbotron.module.scss';
 
-const Jumbotron = (props) => {
+const Jumbotron = ({ reverse, title, subtitle, image, alt }) => {
   return (
     <div className={styles.jumbotron}>
-      <div className={`${styles.container} ${props.reverse && styles.reverse}`}>
+      <div className={`${styles.container} ${reverse && styles.reverse}`}>
         <div className={styles.left}>
-          <span className={styles.title}>{props.title}</span>
-          <span className={styles.subtitle}>{props.subtitle}</span>
+          <span className={styles.title}>{title}</span>
+          <span className={styles.subtitle}>{subtitle}</span>
         </div>
         <div className={styles.right}>
-          <img src={props.image} alt={props.alt} />
+          <img
+            src={require(`../../assets/images/misc/home-${image}.jpg`)}
+            alt={alt}
+          />
         </div>
       </div>
     </div>
