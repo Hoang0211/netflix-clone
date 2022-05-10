@@ -1,17 +1,15 @@
-import React, { useRef, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useRef, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-import useInput from "../../../hooks/use-input";
+import useInput from '../../../hooks/use-input';
+import FirebaseContext from '../../../store/firebase-context';
+import styles from './SignForm.module.scss';
 
-import FirebaseContext from "../../../store/firebase-context";
-
-import styles from "./SignForm.module.scss";
-
-const validateFirstName = (value) => value.trim() !== "";
+const validateFirstName = (value) => value.trim() !== '';
 const validateEmail = (value) => value.length > 4;
 const validatePassword = (value) => value.length > 5;
 
-const SignForm = (props) => {
+const SignForm = ({ type }) => {
   const firebaseCtx = useContext(FirebaseContext);
   const navigate = useNavigate();
 
@@ -52,7 +50,7 @@ const SignForm = (props) => {
 
   let formIsValid = false;
 
-  if (props.type === "signin") {
+  if (type === 'signin') {
     if (emailIsValid && passwordIsValid) {
       formIsValid = true;
     }
@@ -73,7 +71,7 @@ const SignForm = (props) => {
     const enteredEmail = emailValue;
     const enteredPassword = passwordValue;
 
-    if (props.type === "signup") {
+    if (type === 'signup') {
       try {
         await firebaseCtx.signUpUser(
           enteredFirstName,
@@ -81,13 +79,13 @@ const SignForm = (props) => {
           enteredPassword
         );
         resetHandler();
-        navigate("/signin");
+        navigate('/signin');
       } catch (err) {}
     } else {
       try {
         await firebaseCtx.signInUser(enteredEmail, enteredPassword);
         resetHandler();
-        navigate("/browse");
+        navigate('/browse');
       } catch (err) {}
     }
   };
@@ -99,25 +97,25 @@ const SignForm = (props) => {
   };
 
   return (
-    <form className={styles["sign-form"]} onSubmit={submitHandler}>
+    <form className={styles['sign-form']} onSubmit={submitHandler}>
       <span className={styles.title}>
-        {props.type === "signin" ? "Sign In" : "Sign Up"}
+        {type === 'signin' ? 'Sign In' : 'Sign Up'}
       </span>
-      {props.type === "signup" && (
+      {type === 'signup' && (
         <>
           <div
-            className={`${styles["input-container"]} ${
+            className={`${styles['input-container']} ${
               firstNameIsDisplay ? styles.focus : styles.blur
             }  ${firstNameHasError && styles.invalid}`}
             onClick={firstNameFocusHandler}
           >
-            <label htmlFor="firstName" className={styles.placeholder}>
+            <label htmlFor='firstName' className={styles.placeholder}>
               First name
             </label>
             <input
-              type="text"
-              id="firstName"
-              name="firstName"
+              type='text'
+              id='firstName'
+              name='firstName'
               value={firstNameValue}
               ref={firstNameRef}
               onBlur={firstNameBlurHandler}
@@ -130,18 +128,18 @@ const SignForm = (props) => {
         </>
       )}
       <div
-        className={`${styles["input-container"]} ${
+        className={`${styles['input-container']} ${
           emailIsDisplay ? styles.focus : styles.blur
         }  ${emailHasError && styles.invalid}`}
         onClick={emailFocusHandler}
       >
-        <label htmlFor="email" className={styles.placeholder}>
+        <label htmlFor='email' className={styles.placeholder}>
           Email
         </label>
         <input
-          type="email"
-          id="email"
-          name="email"
+          type='email'
+          id='email'
+          name='email'
           value={emailValue}
           ref={emailRef}
           onBlur={emailBlurHandler}
@@ -154,18 +152,18 @@ const SignForm = (props) => {
         </span>
       )}
       <div
-        className={`${styles["input-container"]} ${
+        className={`${styles['input-container']} ${
           passwordIsDisplay ? styles.focus : styles.blur
         } ${passwordHasError && styles.invalid}`}
         onClick={passwordFocusHandler}
       >
-        <label htmlFor="password" className={styles.placeholder}>
+        <label htmlFor='password' className={styles.placeholder}>
           Password
         </label>
         <input
-          type="password"
-          id="password"
-          name="password"
+          type='password'
+          id='password'
+          name='password'
           value={passwordValue}
           ref={passwordRef}
           onBlur={passwordBlurHandler}
@@ -181,22 +179,22 @@ const SignForm = (props) => {
         <span className={styles.loading}>Loading...</span>
       )}
       {!firebaseCtx.loading && (
-        <button type="submit" className={styles["submit-btn"]}>
-          {props.type === "signin" ? "Sign In" : "Sign Up"}
+        <button type='submit' className={styles['submit-btn']}>
+          {type === 'signin' ? 'Sign In' : 'Sign Up'}
         </button>
       )}
-      <div className={styles["switch-option"]}>
-        {props.type === "signin" ? (
+      <div className={styles['switch-option']}>
+        {type === 'signin' ? (
           <>
             <span>New to Netflix? </span>
-            <Link to="/signup" onClick={resetHandler}>
+            <Link to='/signup' onClick={resetHandler}>
               Sign up now.
             </Link>
           </>
         ) : (
           <>
             <span>Already a user? </span>
-            <Link to="/signin" onClick={resetHandler}>
+            <Link to='/signin' onClick={resetHandler}>
               Sign in now.
             </Link>
           </>
