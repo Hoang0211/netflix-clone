@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import FaqItem from './FaqItem';
 import RegForm from '../form/regForm/RegForm';
-import faqs from '../../mock-data/faqs.json';
+import { faqs } from '../../data/faqs-data';
 import styles from './Faqs.module.scss';
 
 const Faqs = () => {

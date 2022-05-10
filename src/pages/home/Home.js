@@ -4,7 +4,7 @@ import HeaderHome from '../../components/header/headerHome/HeaderHome';
 import Jumbotron from '../../components/jumbotron/Jumbotron';
 import Faqs from '../../components/faqs/Faqs';
 import Footer from '../../components/footer/footer/Footer';
-import jumbotrons from '../../mock-data/jumbotrons.json';
+import { jumbotrons } from '../../data/jumbotrons-data';
 import styles from './Home.module.scss';
 
 const Home = () => {
