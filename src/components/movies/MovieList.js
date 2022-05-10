@@ -1,57 +1,40 @@
-import React from "react";
+import React from 'react';
 
-import MovieItem from "./MovieItem";
-import MovieInfoContainer from "./MovieInfoContainer";
+import MovieItem from './MovieItem';
+import MovieInfoContainer from './MovieInfoContainer';
+import styles from './MovieList.module.scss';
 
-import styles from "./MovieList.module.scss";
-
-const MovieList = (props) => {
+const MovieList = ({
+  id,
+  type,
+  genre,
+  moviesArr,
+  showingListId,
+  featuredInfo,
+  showFeaturedHandler,
+  hideFeaturedHandler,
+}) => {
   return (
-    <div className={styles["movies-list"]}>
-      <span className={styles["list-title"]}>
-        {props.genre.charAt(0).toUpperCase() + props.genre.slice(1)}
+    <div className={styles['movies-list']}>
+      <span className={styles['list-title']}>
+        {genre.charAt(0).toUpperCase() + genre.slice(1)}
       </span>
-      <div className={styles["movies-container"]}>
-        <MovieItem
-          type={props.type}
-          genre={props.genre}
-          movie={props.moviesArr[0]}
-          listId={props.id}
-          showFeaturedHandler={props.showFeaturedHandler}
-        />
-        <MovieItem
-          type={props.type}
-          genre={props.genre}
-          movie={props.moviesArr[1]}
-          listId={props.id}
-          showFeaturedHandler={props.showFeaturedHandler}
-        />
-        <MovieItem
-          type={props.type}
-          genre={props.genre}
-          movie={props.moviesArr[2]}
-          listId={props.id}
-          showFeaturedHandler={props.showFeaturedHandler}
-        />
-        <MovieItem
-          type={props.type}
-          genre={props.genre}
-          movie={props.moviesArr[3]}
-          listId={props.id}
-          showFeaturedHandler={props.showFeaturedHandler}
-        />
-        <MovieItem
-          type={props.type}
-          genre={props.genre}
-          movie={props.moviesArr[4]}
-          listId={props.id}
-          showFeaturedHandler={props.showFeaturedHandler}
-        />
+      <div className={styles['movies-container']}>
+        {moviesArr.map((movie) => (
+          <MovieItem
+            key={movie.id}
+            type={type}
+            genre={genre}
+            movie={movie}
+            listId={id}
+            showFeaturedHandler={showFeaturedHandler}
+          />
+        ))}
       </div>
-      {props.id === props.showingListId && (
+      {id === showingListId && (
         <MovieInfoContainer
-          featuredInfo={props.featuredInfo}
-          hideFeaturedHandler={props.hideFeaturedHandler}
+          featuredInfo={featuredInfo}
+          hideFeaturedHandler={hideFeaturedHandler}
         />
       )}
     </div>

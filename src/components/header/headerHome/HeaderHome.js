@@ -13,7 +13,7 @@ const HeaderHome = () => {
       <div className={styles.frame}>
         <img src={logo} alt='netflix-logo' />
         <div className={styles.actions}>
-          <select>
+          <select aria-label='language'>
             <option>English</option>
             <option>Suomi</option>
             <option>Svenska</option>

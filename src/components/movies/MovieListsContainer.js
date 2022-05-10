@@ -1,27 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import MovieList from "./MovieList";
+import MovieList from './MovieList';
+import { filmList, seriesList } from '../../data/movie-list-data';
 
-import {
-  childrenSeries,
-  comediesSeries,
-  crimeSeries,
-  documentariesSeries,
-  feelgoodSeries,
-  childrenFilms,
-  dramaFilms,
-  romanceFilms,
-  suspenseFilms,
-  thrillerFilms,
-} from "../../data/movies-data";
-
-const MovieListsContainer = (props) => {
+const MovieListsContainer = ({ type }) => {
   const [showingListId, setShowingListId] = useState(null);
   const [featuredInfo, setFeaturedInfo] = useState({});
 
   useEffect(() => {
     hideFeaturedHandler();
-  }, [props.type]);
+  }, [type]);
 
   const showFeaturedHandler = (listId, movieInfo) => {
     setShowingListId(listId);
@@ -33,111 +21,37 @@ const MovieListsContainer = (props) => {
     setFeaturedInfo({});
   };
 
-  return props.type === "films" ? (
+  return type === 'films' ? (
     <>
-      <MovieList
-        id={1}
-        type={props.type}
-        genre="children"
-        moviesArr={childrenFilms}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={2}
-        type={props.type}
-        genre="drama"
-        moviesArr={dramaFilms}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={3}
-        type={props.type}
-        genre="romance"
-        moviesArr={romanceFilms}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={4}
-        type={props.type}
-        genre="suspense"
-        moviesArr={suspenseFilms}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={5}
-        type={props.type}
-        genre="thriller"
-        moviesArr={thrillerFilms}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
+      {filmList.map((list) => (
+        <MovieList
+          key={list.id}
+          id={list.id}
+          type={list.type}
+          genre={list.genre}
+          moviesArr={list.moviesArr}
+          showingListId={showingListId}
+          featuredInfo={featuredInfo}
+          showFeaturedHandler={showFeaturedHandler}
+          hideFeaturedHandler={hideFeaturedHandler}
+        />
+      ))}
     </>
   ) : (
     <>
-      <MovieList
-        id={1}
-        type={props.type}
-        genre="children"
-        moviesArr={childrenSeries}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={2}
-        type={props.type}
-        genre="comedies"
-        moviesArr={comediesSeries}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={3}
-        type={props.type}
-        genre="crime"
-        moviesArr={crimeSeries}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={4}
-        type={props.type}
-        genre="documentaries"
-        moviesArr={documentariesSeries}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
-      <MovieList
-        id={5}
-        type={props.type}
-        genre="feel-good"
-        moviesArr={feelgoodSeries}
-        showingListId={showingListId}
-        featuredInfo={featuredInfo}
-        showFeaturedHandler={showFeaturedHandler}
-        hideFeaturedHandler={hideFeaturedHandler}
-      />
+      {seriesList.map((list) => (
+        <MovieList
+          key={list.id}
+          id={list.id}
+          type={list.type}
+          genre={list.genre}
+          moviesArr={list.moviesArr}
+          showingListId={showingListId}
+          featuredInfo={featuredInfo}
+          showFeaturedHandler={showFeaturedHandler}
+          hideFeaturedHandler={hideFeaturedHandler}
+        />
+      ))}
     </>
   );
 };

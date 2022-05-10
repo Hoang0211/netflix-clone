@@ -1,14 +1,13 @@
-import React from "react";
+import React from 'react';
+import { IoPlaySharp } from 'react-icons/io5';
 
-import bg from "../../assets/images/misc/joker1.jpg";
-import { IoPlaySharp } from "react-icons/io5";
+import bg from '../../assets/images/misc/joker1.jpg';
+import styles from './Featured.module.scss';
 
-import styles from "./Featured.module.scss";
-
-const Featured = (props) => {
+const Featured = () => {
   return (
     <div className={styles.featured}>
-      <img className={styles.bg} src={bg} alt="" />
+      <img className={styles.bg} src={bg} alt='' />
       <div className={styles.overview}>
         <span className={styles.title}>Watch Joker Now</span>
         <span className={styles.desc}>

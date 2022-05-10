@@ -25,7 +25,7 @@ const Footer = ({ page }) => {
         <li className={styles.link}>Legal Notices</li>
         <li className={styles.link}>Only on Netflix</li>
       </ul>
-      <select className={styles.language}>
+      <select className={styles.language} aria-label='language'>
         <option>English</option>
         <option>Finnish</option>
         <option>Svenska</option>
