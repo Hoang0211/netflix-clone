@@ -39,7 +39,6 @@ This project uses static data and GitHub Pages for deployment.
 - CSS Module
 - Firebase
 - React.js
-- CSS Module
 - SCSS
 
 [Back To Top](#Table-Of-Contents)
