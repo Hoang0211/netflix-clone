@@ -22,9 +22,9 @@ A Netflix clone web application. For authentication, you can use test@gmail.com/
 
 - Simple to use interface.
 - Authentication using email/password.
-- Signing up for new account feature.
-- View different type of movies after signing in.
-- Application layout is responsive.
+- New account registered using email/password.
+- Browse page display after signed in.
+- Responsive layout.
 
   ![page load](./readme-assets/responsive-layout.gif)
 
@@ -34,12 +34,13 @@ A Netflix clone web application. For authentication, you can use test@gmail.com/
 
 ## Technologies Used
 
-- React.js (Hooks)
-- React-router
-- Context API
-- CSS Modules/SCSS
-- Firebase authentication
-- GitHub Pages
+This project uses static data and GitHub Pages for deployment.
+
+- CSS Module
+- Firebase
+- React.js
+- CSS Module
+- SCSS
 
 [Back To Top](#Table-Of-Contents)
 
